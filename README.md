@@ -34,7 +34,7 @@ This project is a Flutter rewrite of the original [real-time-fund](https://githu
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/real-time-fund-flutter.git
+   git clone git@github.com:Crazy-MT/real-time-fund.git
    cd real-time-fund-flutter
    ```
 
