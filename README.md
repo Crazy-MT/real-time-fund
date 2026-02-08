@@ -1,90 +1,90 @@
-# real-time-fund (Flutter)
+# real-time-fund (Flutter版)
 
-A cross-platform real-time fund tracking application built with Flutter. It helps you track your fund holdings, calculate profits in real-time, and synchronize data across devices using Supabase.
+基于 Flutter 构建的跨平台实时基金追踪应用。它可以帮助你实时追踪基金持仓，计算收益，并通过 Supabase 在多设备间同步数据。
 
-This project is a Flutter rewrite of the original [real-time-fund](https://github.com/inannan/real-time-fund) extension/app, bringing native performance and multi-platform support (iOS, Android, macOS, Web).
+本项目是原 [real-time-fund](https://github.com/inannan/real-time-fund) 插件/应用的 Flutter 重写版本，带来了原生性能和多平台支持（iOS, Android, macOS, Web）。
 
-## ✨ Features
+## ✨ 功能特性
 
-- **Real-time Data**: Fetches real-time fund valuation and NAV from EastMoney and Tencent.
-- **Holdings Management**: Track your cost, shares, and calculate daily/total profit automatically.
-- **Cloud Synchronization**: Sync your data (funds, holdings, groups) across devices using Supabase.
-- **Group Management**: Organize funds into custom groups for better tracking.
-- **Privacy Mode**: Hide sensitive amount information with a single tap.
-- **Detailed Insights**: View fund details, including top stock holdings and their daily performance.
-- **Cross-Platform**: Runs smoothly on iOS, Android, macOS, and Web.
+- **实时数据**: 从天天基金和腾讯财经获取实时估值和净值数据。
+- **持仓管理**: 记录持仓成本、份额，自动计算当日收益和总收益。
+- **云端同步**: 使用 Supabase 在不同设备间同步你的基金、持仓和分组数据。
+- **分组管理**: 自定义分组管理基金，追踪更清晰。
+- **隐私模式**: 一键隐藏敏感金额信息。
+- **详细透视**: 查看基金详情，包括前十大重仓股及其当日表现。
+- **跨平台**: 在 iOS, Android, macOS 和 Web 上流畅运行。
 
-## 🛠️ Tech Stack
+## 🛠️ 技术栈
 
-- **Framework**: [Flutter](https://flutter.dev/)
-- **State Management**: [Provider](https://pub.dev/packages/provider)
-- **Backend / Sync**: [Supabase](https://supabase.com/)
-- **Networking**: `http`, `fast_gbk` (for handling legacy encoding)
-- **Storage**: `shared_preferences` (local), Supabase (cloud)
-- **UI**: Material Design 3 with custom dark theme optimization
+- **框架**: [Flutter](https://flutter.dev/)
+- **状态管理**: [Provider](https://pub.dev/packages/provider)
+- **后端 / 同步**: [Supabase](https://supabase.com/)
+- **网络**: `http`, `fast_gbk` (处理旧编码)
+- **存储**: `shared_preferences` (本地), Supabase (云端)
+- **UI**: Material Design 3 配合自定义深色模式优化
 
-## 🚀 Getting Started
+## 🚀 快速开始
 
-### Prerequisites
+### 前置要求
 
-- [Flutter SDK](https://docs.flutter.dev/get-started/install) installed.
-- A [Supabase](https://supabase.com/) project (free tier is sufficient).
+- 已安装 [Flutter SDK](https://docs.flutter.dev/get-started/install)。
+- 一个 [Supabase](https://supabase.com/) 项目（免费版即可）。
 
-### Installation
+### 安装步骤
 
-1. **Clone the repository**
+1. **克隆仓库**
    ```bash
    git clone git@github.com:Crazy-MT/real-time-fund.git
-   cd real-time-fund-flutter
+   cd real-time-fund
    ```
 
-2. **Install Dependencies**
+2. **安装依赖**
    ```bash
    flutter pub get
    ```
 
-3. **Configuration**
+3. **配置**
    
-   This project uses Supabase for authentication and data sync. You need to provide your own Supabase credentials.
+   本项目使用 Supabase 进行身份验证和数据同步。你需要提供自己的 Supabase 凭据。
 
-   Open `lib/config.dart` and update the following fields:
+   打开 `lib/config.dart` 并更新以下字段：
 
    ```dart
    class Config {
-     static const String supabaseUrl = 'YOUR_SUPABASE_URL';
-     static const String supabaseAnonKey = 'YOUR_SUPABASE_ANON_KEY';
+     static const String supabaseUrl = '你的_SUPABASE_URL';
+     static const String supabaseAnonKey = '你的_SUPABASE_ANON_KEY';
    }
    ```
    
-   *Note: Ensure you have enabled Email/Password authentication in your Supabase project settings.*
+   *注意：请确保在你的 Supabase 项目设置中启用了 邮箱/密码 认证。*
 
-4. **Run the App**
+4. **运行应用**
 
    ```bash
-   # Run on macOS
+   # 在 macOS 上运行
    flutter run -d macos
 
-   # Run on Chrome
+   # 在 Chrome 上运行
    flutter run -d chrome
    ```
 
-## 📱 Screenshots
+## 📱 截图
 
-<img src="assets/screenshots/1.png" width="300" alt="App Screenshot" />
+<img src="assets/screenshots/1.png" width="300" alt="App 截图" />
 
-## 📄 License
+## 📄 许可证
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+本项目基于 MIT 许可证开源 - 查看 [LICENSE](LICENSE) 文件了解详情。
 
-## 🙏 Acknowledgements
+## 🙏 致谢
 
-- Original Project: [real-time-fund](https://github.com/inannan/real-time-fund)
-- Data Sources: EastMoney, Tencent Finance
+- 原项目: [real-time-fund](https://github.com/inannan/real-time-fund)
+- 数据来源: 天天基金, 腾讯财经
 
-## ☕ Support
+## ☕ 支持作者
 
-If you find this project helpful, you can buy me a coffee!
+如果你觉得这个项目对你有帮助，欢迎请我喝杯咖啡！
 
-| WeChat Pay | Alipay |
+| 微信支付 | 支付宝 |
 |------------|--------|
 | <img src="assets/weixin.png" width="200" /> | <img src="assets/zhifubao.png" width="200" /> |
